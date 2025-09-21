@@ -1,6 +1,6 @@
 # ZeroScene：Zero-shot Single Image 3D Scene Generation and Texture Editing
 
-![teaser](https://cdn.jsdelivr.net/gh/xdlbw/Home-of-pictures@master/D:%5CPicGo%5CImage202509111449124.png)
+<img src="https://cdn.jsdelivr.net/gh/xdlbw/Home-of-pictures@master/D:%5CPicGo%5CImage202509211434807.jpg" alt="teaser"  />
 
-> Our method achieves the generation of a 3D digital twin scene from a single RGB image. For foreground objects, we perform high-quality geometry and texture reconstruction of individual assets; for the background, we fit the 3D structure from point clouds. The components are then assembled into a complete scene that is strictly consistent with the spatial layout of the input image.
+> we propose XXX, a novel system that leverages the prior knowledge of foundational vision large models to accomplish both single image-to-3D scene reconstruction and texture editing in a zero-shot manner. For 3D scene generation, XXX decouples foreground and background elements, extracts object-level 2D segmentation and depth information from the input image, and employs point cloud-guided object pose optimization to achieve more accurate scene alignment. Furthermore, XXX supports texture editing for objects within a scene. We impose constraints on diffusion models and introduce a mask-guided progressive image generation strategy, effectively maintaining multi-view texture consistency. By further integrating Physically Based Rendering (PBR) material estimation, we enhance the realism of rendered outputs.
 
