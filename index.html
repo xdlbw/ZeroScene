@@ -280,7 +280,7 @@
                     modelViewer.setAttribute('environment-image', 'neutral');
                     modelViewer.setAttribute('camera-target', '0m 0m 0m');
                     modelViewer.setAttribute('orientation', '0deg 0deg 0deg');
-                    modelViewer.setAttribute('shadow-intensity', '1');
+                    modelViewer.setAttribute('shadow-intensity', '1.0');
                     modelViewer.setAttribute('ar', 'true');
                     modelViewer.setAttribute('auto-rotate', '');
                     modelViewer.setAttribute('camera-controls', '');
@@ -365,17 +365,16 @@
 
                         <!-- 标题 -->
                         <h1 class="title is-0 publication-title" style="
-                          font-size: clamp(4rem, 4vw, 2.5rem); /* 调整字体大小范围，控制换行 */
+                          font-size: clamp(2.5rem, 2.1vw, 4rem); /* 调整字体大小范围，控制换行 */
                           background: linear-gradient(45deg, #7b1fa2, #9c27b0, #e91e63, #ff9a9e);
                           -webkit-background-clip: text;
                           background-clip: text;
                           color: transparent; /* 使文字透明，显示渐变背景 */
                           line-height: 1.2; /* 调整行高避免过宽 */
-                          max-width: 900px; /* 限制最大宽度辅助换行控制 */
+                          max-width: 5000px; /* 限制最大宽度辅助换行控制 */
                           margin: 0 auto; /* 居中显示 */
                         ">
-                            Zero-shot Single Image 3D Scene Generation  <br />
-                            and Texture Editing
+                            ZeroScene: A Zero-Shot Framework for 3D Scene Generation from a Single Image and Controllable Texture Editing
                         </h1>
 
                         <!-- <h1 class="title is-1 publication-title">
@@ -472,22 +471,21 @@
                 <h2 class="title is-1" style="text-align: center;">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                      Reconstructing 3D scenes from a single RGB image remains a core challenge in computer graphics and vision. 
-                      Existing methods often struggle to simultaneously ensure the quality of individual assets and the coherence 
-                      of the overall scene in complex scene generation tasks. To address these limitations, we propose XXX, 
-                      a novel system that leverages the prior knowledge of foundational vision large models to accomplish both 
-                      single image-to-3D scene reconstruction and texture editing in a zero-shot manner. For 3D scene generation, 
-                      XXX decouples foreground and background elements, extracts object-level 2D segmentation and depth information 
-                      from the input image, and employs point cloud-guided object pose optimization to achieve more accurate scene alignment. 
-                      Furthermore, XXX supports texture editing for objects within a scene. We impose constraints on diffusion models 
-                      and introduce a mask-guided progressive image generation strategy, effectively maintaining multi-view texture consistency. 
-                      By further integrating PBR material estimation, we enhance the realism of rendered outputs. Experimental results 
-                      demonstrate that our framework not only ensures the accuracy of generated assets, but also faithfully reconstructs 
-                      scene layouts and produces highly detailed textures that closely align with text prompts. Leveraging generative 
-                      artificial intelligence, XXX can transform 2D images into diversified 3D worlds with various styles, showing broad 
-                      application potential in virtual content creation, such as digital twinning and immersive game production. 
-                      Moreover, in the field of robotics, the system can effectively support "real-to-sim" transfer and generate highly 
-                      realistic and trainable simulation environments.
+                        In the field of 3D content generation, single image scene reconstruction methods still struggle to simultaneously ensure 
+                        the quality of individual assets and the coherence of the overall scene in complex environments, while texture editing techniques 
+                        often fail to maintain both local continuity and multi-view consistency. In this paper, we propose a novel system <b>ZeroScene</b>, 
+                        which leverages the prior knowledge of large vision models to accomplish both single image-to-3D scene reconstruction and 
+                        texture editing in a zero-shot manner. ZeroScene extracts object-level 2D segmentation and depth information from input images 
+                        to infer spatial relationships within the scene. It then jointly optimizes 3D and 2D projection losses of the point cloud to update 
+                        object poses for precise scene alignment, ultimately constructing a coherent and complete 3D scene that encompasses both foreground and background. 
+                        Moreover, ZeroScene supports texture editing of objects in the scene. By imposing constraints on the diffusion model and introducing 
+                        a mask-guided progressive image generation strategy, we effectively maintain texture consistency across multiple viewpoints and 
+                        further enhance the realism of rendered results through Physically Based Rendering (PBR) material estimation. Experimental results 
+                        demonstrate that our framework not only ensures the geometric and appearance accuracy of generated assets, but also faithfully reconstructs 
+                        scene layouts and produces highly detailed textures that closely align with text prompts. Leveraging generative artificial intelligence, 
+                        ZeroScene can transform 2D images into diversified 3D worlds with various styles, showing broad application potential in virtual content creation, 
+                        such as digital twins and immersive game production, while also effectively support "real-to-sim" transfer in robotics through the generation of 
+                        highly realistic and trainable simulation environments.
                     </p>
                 </div>
             </div>
@@ -531,7 +529,7 @@
     <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
-                <h2 class="title is-1" style="text-align: center;">Qualitative comparisons between XXX and state-of-the-art <br />
+                <h2 class="title is-1" style="text-align: center;">Qualitative comparisons between ZeroScene and state-of-the-art <br />
                     <span style="color: #4FACFA;">single-image scene generation</span> methods </h2>
             </div>
         </div>
@@ -561,7 +559,7 @@
             cameraOrbit: "0deg 75deg 2.5m", 
             position: "0m 0m 0m", 
             rotationPerSecond: "30deg", 
-            shadowIntensity: "0.6"
+            shadowIntensity: "2.0"
         };
 
         loadGallery();
@@ -728,7 +726,7 @@
             <div class="columns is-centered has-text-centered">
                 <div class="column">
                     <h2 class="title is-1" style="text-align: center;">More scenes <span
-                        style="color: #4FACFA;">(including background)</span> generated by XXX</h2>
+                        style="color: #4FACFA;">(including background)</span> generated by ZeroScene</h2>
                     <div class="column">
                         <img src="images/more results.jpg" />
                         <br><br><br>
@@ -769,7 +767,7 @@
     <section class="section">
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
-                <h2 class="title is-1" style="text-align: center;">Qualitative comparisons between XXX and state-of-the-art <br /> <span
+                <h2 class="title is-1" style="text-align: center;">Qualitative comparisons between ZeroScene and state-of-the-art <br /> <span
                         style="color: #4FACFA;">text-to-texture</span> generation methods </h2>
             </div>
         </div>
