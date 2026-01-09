@@ -314,7 +314,7 @@
 <body>
 
     <!-- 其他工作 -->
-    <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a
             role="button"
@@ -342,7 +342,7 @@
                   class="navbar-item"
                   href="https://arxiv.org/abs/2504.11734"
                   target="_blank">
-                  Recent Advance in 3D Object and Scene Generation: A Survey
+                  Recent Advances in 3D Object and Scene Generation: A Survey
                 </a>
                 <a
                   class="navbar-item"
@@ -355,7 +355,7 @@
             </div>
           </div>
         </div>
-    </nav> -->
+    </nav>
 
     <section class="hero">
         <div class="hero-body">
@@ -386,7 +386,7 @@
                         </div> -->
                         
                         <!-- 作者 -->
-                        <!-- <div class="is-size-3 publication-authors" style="margin-top: 1.5rem;">
+                        <div class="is-size-3 publication-authors" style="margin-top: 1.5rem;">
                             <span class="author-block">
                                 <a class="is-size-3 publication-authors" href="">
                                     Xiang Tang</a><sup>1,2</sup>,</span>
@@ -396,12 +396,12 @@
                             </span>
                             <span class="author-block">
                                 <a class="is-size-3 publication-authors" href="https://scholar.google.com/citations?user=4LsZhDgAAAAJ">
-                                  Xiaopeng Fan</a><sup>2,3,4✉</sup>,
+                                  Xiaopeng Fan</a><sup>2,3,4✉</sup>
                             </span>
-                        </div> -->
+                        </div>
 
                         <!-- 单位 -->
-                        <!-- <div class="is-size-3 publication-authors" style="margin-top: 1.5rem;">
+                        <div class="is-size-3 publication-authors" style="margin-top: 1.5rem;">
                             <span class="author-block"><sup>1</sup>Harbin Institute of Technology, Shenzhen </span>
                             &nbsp;&nbsp;
                             <span class="author-block"><sup>2</sup>Peng Cheng Laboratory </span>
@@ -411,29 +411,29 @@
                             <span class="author-block"><sup>4</sup>Harbin Institute of Technology, Suzhou Research Institute </span>
                             &nbsp;&nbsp;
                             <span class="author-block"><sup>✉</sup>Corresponding Author </span>
-                        </div> -->
+                        </div>
 
                         <!-- 链接 -->
-                        <!-- <div class="publication-links" style="margin-top: 1.5rem;">
+                        <div class="publication-links" style="margin-top: 1.5rem;">
                             <span class="link-block">
                                 <a class="is-size-4 external-link button is-normal is-rounded is-dark"
-                                    href="">
+                                    href="https://arxiv.org/abs/2509.23607">
                                     <span class="icon">
                                         <i class="ai ai-arxiv"></i>
                                     </span>
-                                    <span>arXiv</span>
+                                    <span>ArXiv</span>
                                 </a>
                             </span>
                             <span class="link-block">
-                                <a href="https://github.com/xdlbw/ZeroScene"
+                                <a href="https://www.youtube.com/watch?v=b-_d2lXTjgs"
                                     class="is-size-4 external-link button is-normal is-rounded is-dark">
                                     <span class="icon">
-                                        <i class="fab fa-github"></i>
+                                        <i class="fab fa-youtube"></i>
                                     </span>
-                                    <span>Code</span>
+                                    <span>Video</span>
                                 </a>
                             </span>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -471,21 +471,22 @@
                 <h2 class="title is-1" style="text-align: center;">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        In the field of 3D content generation, single image scene reconstruction methods still struggle to simultaneously ensure 
-                        the quality of individual assets and the coherence of the overall scene in complex environments, while texture editing techniques 
-                        often fail to maintain both local continuity and multi-view consistency. In this paper, we propose a novel system <b>ZeroScene</b>, 
-                        which leverages the prior knowledge of large vision models to accomplish both single image-to-3D scene reconstruction and 
-                        texture editing in a zero-shot manner. ZeroScene extracts object-level 2D segmentation and depth information from input images 
-                        to infer spatial relationships within the scene. It then jointly optimizes 3D and 2D projection losses of the point cloud to update 
-                        object poses for precise scene alignment, ultimately constructing a coherent and complete 3D scene that encompasses both foreground and background. 
-                        Moreover, ZeroScene supports texture editing of objects in the scene. By imposing constraints on the diffusion model and introducing 
-                        a mask-guided progressive image generation strategy, we effectively maintain texture consistency across multiple viewpoints and 
-                        further enhance the realism of rendered results through Physically Based Rendering (PBR) material estimation. Experimental results 
-                        demonstrate that our framework not only ensures the geometric and appearance accuracy of generated assets, but also faithfully reconstructs 
-                        scene layouts and produces highly detailed textures that closely align with text prompts. Leveraging generative artificial intelligence, 
-                        ZeroScene can transform 2D images into diversified 3D worlds with various styles, showing broad application potential in virtual content creation, 
-                        such as digital twins and immersive game production, while also effectively support "real-to-sim" transfer in robotics through the generation of 
-                        highly realistic and trainable simulation environments.
+                        In the field of 3D content generation, single image scene reconstruction methods still struggle to simultaneously 
+                        ensure the quality of individual assets and the coherence of the overall scene in complex environments, while texture 
+                        editing techniques often fail to maintain both local continuity and multi-view consistency. In this paper, we propose 
+                        a novel system <b>ZeroScene</b>, which leverages the prior knowledge of large vision models to accomplish both single 
+                        image-to-3D scene reconstruction and texture editing in a zero-shot manner. ZeroScene extracts object-level 2D segmentation 
+                        and depth information from input images to infer spatial relationships within the scene. It then jointly optimizes 3D 
+                        and 2D projection losses of the point cloud to update object poses for precise scene alignment, ultimately constructing a 
+                        coherent and complete 3D scene that encompasses both foreground and background. Moreover, ZeroScene supports texture editing 
+                        of objects in the scene. By imposing constraints on the diffusion model and introducing a mask-guided progressive image 
+                        generation strategy, we effectively maintain texture consistency across multiple viewpoints and further enhance the realism 
+                        of rendered results through Physically Based Rendering (PBR) material estimation. Experimental results demonstrate that our 
+                        framework not only ensures the geometric and appearance accuracy of generated assets, but also faithfully reconstructs scene 
+                        layouts and produces highly detailed textures that closely align with text prompts. Leveraging generative artificial intelligence, 
+                        ZeroScene can transform 2D images into diversified 3D worlds with various styles, showing broad application potential in virtual 
+                        content creation, such as digital twins and immersive game production, while also effectively supports "real-to-sim" transfer in 
+                        robotics through the generation of highly realistic and trainable simulation environments.
                     </p>
                 </div>
             </div>
@@ -826,6 +827,7 @@
 
         const texttechniques = [
             { name: "Input Mesh", suffix: "mesh" },
+            { name: "TEXTure", suffix: "texture" },
             { name: "MVPaint", suffix: "mvpaint" },
             { name: "MV-Adapter", suffix: "mvadapter" },
             { name: "EmbodiedGen", suffix: "embodiedgen" },
